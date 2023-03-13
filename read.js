@@ -1,7 +1,9 @@
 const express = require('express');
 const XLSX = require('xlsx');
-
 const app = express();
+const cors = require('cors');
+app.use(cors());
+
 
 app.get('/', (req, res) => {
 
@@ -29,7 +31,7 @@ temp.forEach((res) => {
 
 // Printing data
 console.log(data)
-  res.send(data);
+  res.json(data);
 });
 
 app.listen(8000, () => {
