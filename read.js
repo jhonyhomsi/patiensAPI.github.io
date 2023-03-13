@@ -12,7 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 const reader = require('xlsx')
 
 // Reading our test file
-const file = reader.readFile('exam-results.xlsx')
+const file = reader.readFile('users.xlsx')
 
 let data = []
 
